@@ -5,6 +5,7 @@ import com.solvd.model.Employee;
 import com.solvd.pages.common.pim.PimPageBase;
 import com.zebrunner.carina.utils.factory.DeviceType;
 import com.zebrunner.carina.webdriver.decorator.ExtendedWebElement;
+import org.apache.commons.lang3.NotImplementedException;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -25,6 +26,11 @@ public class PimPageDesktop extends PimPageBase {
     }
 
     @Override
+    public void getMenuByClick() {
+        throw new NotImplementedException("Not implemented for desktop");
+    }
+
+    @Override
     public void clickSearchEmployeeButton() {
         searchEmployeeButton.click();
     }
@@ -32,7 +38,6 @@ public class PimPageDesktop extends PimPageBase {
     @Override
     public void inputIdEmployee(String id) {
         idEmployeeField.click();
-        //Is it only one way,  that works in Carina since method clear() is not implemented??
         JavascriptExecutor jsExecutor = (JavascriptExecutor) getDriver();
         jsExecutor.executeScript("arguments[0].value='';", idEmployeeField.getElement());
         idEmployeeField.type(id);
@@ -47,5 +52,4 @@ public class PimPageDesktop extends PimPageBase {
     public List<Employee> mapToEmployeeList(List<ExtendedWebElement> employees) {
         return EmployeeMapper.mapListToEmployeesDesktop(employeeList);
     }
-
 }

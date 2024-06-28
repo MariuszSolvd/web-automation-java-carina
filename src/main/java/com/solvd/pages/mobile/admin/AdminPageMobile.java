@@ -1,13 +1,13 @@
-package com.solvd.pages.mobile;
+package com.solvd.pages.mobile.admin;
 
-import com.solvd.pages.common.DashboardPageBase;
+
+import com.solvd.pages.common.admin.AdminPageBase;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
+public abstract class AdminPageMobile extends AdminPageBase {
 
-public class DashboardPageMobile extends DashboardPageBase {
-
-    public DashboardPageMobile(WebDriver driver) {
+    public AdminPageMobile(WebDriver driver) {
         super(driver);
     }
 

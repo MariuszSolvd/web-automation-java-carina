@@ -1,14 +1,14 @@
 package com.solvd.pages.mobile;
 
-import com.solvd.pages.common.DashboardPageBase;
+import com.solvd.pages.common.PageWithLeftMenuBase;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
+public abstract class PageWithLeftMenuBaseMobile extends PageWithLeftMenuBase {
 
-public class DashboardPageMobile extends DashboardPageBase {
-
-    public DashboardPageMobile(WebDriver driver) {
+    public PageWithLeftMenuBaseMobile(WebDriver driver) {
         super(driver);
+        setUiLoadedMarker(menuButton);
     }
 
     @Override

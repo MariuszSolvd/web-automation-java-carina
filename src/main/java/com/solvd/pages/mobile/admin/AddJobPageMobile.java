@@ -1,13 +1,13 @@
-package com.solvd.pages.mobile;
+package com.solvd.pages.mobile.admin;
 
-import com.solvd.pages.common.DashboardPageBase;
+import com.solvd.pages.common.admin.AddJobPageBase;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 
-public class DashboardPageMobile extends DashboardPageBase {
+public  class AddJobPageMobile extends AddJobPageBase {
 
-    public DashboardPageMobile(WebDriver driver) {
+    public AddJobPageMobile(WebDriver driver) {
         super(driver);
     }
 
